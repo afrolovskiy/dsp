@@ -3,7 +3,7 @@ function [u_rec, x_rec] = restore(u_disc, x_disc, x_start, x_end, dx)
     x_rec = x_start:eps:x_end;
     u_rec = zeros(1, length(x_rec));
     
-    koeff = pi / dx;
+    koeff = 1 / dx;
     len_disc = length(x_disc);
     for i = 1:length(x_rec)
         sum = 0;
