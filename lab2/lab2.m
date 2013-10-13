@@ -7,7 +7,7 @@ global sigma; sigma = 0.5;
 
 a = -3.0;
 b = 3.0;
-dx = 0.1;
+dx = 0.01;
 
 draw_result(@impulse, a, b, dx);
 %draw_result(@gauss, a, b, dx);
