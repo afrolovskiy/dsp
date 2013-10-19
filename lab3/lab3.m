@@ -9,6 +9,6 @@ a = -3.0;
 b = 3.0;
 dx = 0.1;
 
-draw_result(@impulse, @impulse, a, b, dx);
+%draw_result(@impulse, @impulse, a, b, dx);
 draw_result(@impulse, @gauss, a, b, dx);
-draw_result(@gauss, @gauss, a, b, dx);
+%draw_result(@gauss, @gauss, a, b, dx);
