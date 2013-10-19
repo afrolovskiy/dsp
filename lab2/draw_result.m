@@ -1,8 +1,7 @@
 function [] = draw_result(f, x_start, x_end, dx)
     [u, x] = discretize(f, x_start, x_end, dx);
     figure;
-    plot(x, u);
-
+    
     %dpf
     tic;
     initime = cputime;
@@ -15,9 +14,8 @@ function [] = draw_result(f, x_start, x_end, dx)
     fprintf('TIC TOC: %g\n', elapsed);
     fprintf('CPUTIME: %g\n', fintime - initime);
     fprintf('CLOCK:   %g\n', etime(time2, time1));
-    
-    figure;
-    plot(x, abs(v), 'k');
+        
+    plot(x, abs(v), 'k', 'LineWidth', 3);
     title('dpf');
     
     %bpf
@@ -33,7 +31,7 @@ function [] = draw_result(f, x_start, x_end, dx)
     fprintf('CPUTIME: %g\n', fintime - initime);
     fprintf('CLOCK:   %g\n', etime(time2, time1));
     
-    figure;
+    hold on;
     plot(x, abs(v), 'r');
     title('bpf');    
 end
