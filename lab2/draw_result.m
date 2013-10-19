@@ -34,5 +34,7 @@ function [] = draw_result(f, x_start, x_end, dx)
     hold on;
     plot(x, abs(v), 'r');
     title('bpf');    
+    
+    legend('дот', 'аот');
 end
 
