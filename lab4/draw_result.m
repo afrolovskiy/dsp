@@ -2,7 +2,8 @@ function [] = draw_result(u, noise, x_start, x_end, dx, uname, nname)
     [u_disc, x] = discretize(u, x_start, x_end, dx);
     [u_noised] = noise(u_disc);
     
-    figure;    
+    figure('Name', [uname, ' with ', nname]);
+    
     subplot(2, 2, 1);
     hold on;
     plot(x, u_noised, 'k');
