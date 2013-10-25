@@ -6,8 +6,8 @@ function [u_output] = convolution(u_disc, h_disc)
     h_new = zeros(1, 2*N);
     h_new(1:N) = h_disc;
 
-    [v_input] = fft(u_new) ./ N;
-    [h_input] = fft(h_new) ./ N;
+    [v_input] = fft(u_new);
+    [h_input] = fft(h_new);
 
     u_output = ifft(v_input .* h_input);
 end
