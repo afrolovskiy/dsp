@@ -1,6 +1,6 @@
 function [u] = gauss(x)
-    global ampl;
-    global sigma;
-    u = ampl * exp(-x^2/sigma^2);
+    global AMPL;
+    global SIGMA;
+    u = AMPL * exp(-x^2/SIGMA^2);
 end
 

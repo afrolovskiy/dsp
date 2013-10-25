@@ -1,7 +1,7 @@
 function [u] = impulse(x)
-    global x_left x_right ampl;
-    if (x_left <= x) && (x <= x_right)
-        u = ampl;
+    global X_LEFT X_RIGHT AMPL;
+    if (X_LEFT <= x) && (x <= X_RIGHT)
+        u = AMPL;
     else
         u = 0;
     end
