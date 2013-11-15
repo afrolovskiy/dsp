@@ -18,7 +18,7 @@ function [H] = regularize(u1, eps, u2, delta, dx, T)
             const = 1 + (2*pi*(m-1)/T)^2;
             numerator = exp(2*pi*1i*k*(m-1)/N) * u1_conj(m) * u2(m);
             denominator = abs(u1(m))^2 * dx^2 + lambda * const;
-            H(k) = H(k) + numerator/denominator;
+            H(k) = H(k) + (-1)^(m-1)*numerator/denominator;
         end
         H(k) = dx/N * H(k);
     end    
